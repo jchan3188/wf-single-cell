@@ -68,8 +68,7 @@ process generate_whitelist{
     """
     workflow-glue knee_plot \
         counts \
-        /* --exp_cells ${meta['exp_cells']} \ */
-        --read_count_threshold 500 \
+        --read_count_threshold 500 \ // --exp_cells ${meta['exp_cells']}
         --output_whitelist "${meta.sample_id}.whitelist.tsv" \
         --output_plot "${meta.sample_id}.kneeplot.png"
     """
